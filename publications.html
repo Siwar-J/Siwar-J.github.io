@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Dr. Siwar Jendoubi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        .publications-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .publications-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .publications-header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .research-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .research-metric {
+            text-align: center;
+        }
+        
+        .research-metric .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .research-metric .label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .publications-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .filter-section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .filter-tag {
+            padding: 0.4rem 1rem;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-tag:hover {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        .filter-tag.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .publication-year-group {
+            margin-bottom: 3rem;
+        }
+        
+        .year-header {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .year-stats {
+            font-size: 0.875rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        .publication-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .publication-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #cbd5e1;
+        }
+        
+        .publication-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .publication-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1e293b;
+            line-height: 1.4;
+            flex: 1;
+        }
+        
+        .publication-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+        
+        .citation-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .citation-badge .icon {
+            font-size: 0.625rem;
+        }
+        
+        .publication-authors {
+            color: #475569;
+            font-size: 0.9375rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-venue {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .publication-abstract {
+            color: #475569;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 6px;
+            border-left: 3px solid #2563eb;
+        }
+        
+        .publication-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: #f1f5f9;
+            color: #475569;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .publication-link:hover {
+            background: #2563eb;
+            color: white;
+        }
+        
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .publication-tag {
+            padding: 0.25rem 0.75rem;
+            background: #e0f2fe;
+            color: #0369a1;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .publication-tag.nlp { background: #dbeafe; color: #1e40af; }
+        .publication-tag.social { background: #fce7f3; color: #9d174d; }
+        .publication-tag.vision { background: #dcfce7; color: #15803d; }
+        .publication-tag.theory { background: #f3e8ff; color: #7e22ce; }
+        .publication-tag.ai { background: #fef3c7; color: #92400e; }
+        
+        .top-publications {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+        }
+        
+        .top-publications h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #1e293b;
+        }
+        
+        .top-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .top-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #2563eb;
+        }
+        
+        .top-card .rank {
+            font-size: 0.875rem;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .top-card .title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1e293b;
+        }
+        
+        .top-card .citations {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .conferences-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .conference-badge {
+            padding: 0.5rem 1rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            color: #475569;
+        }
+        
+        @media (max-width: 768px) {
+            .publications-header h1 {
+                font-size: 2rem;
+            }
+            
+            .research-metrics {
+                gap: 1.5rem;
+            }
+            
+            .publication-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .publication-badges {
+                margin-left: 0;
+                align-self: flex-start;
+            }
+            
+            .top-publications {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Dr. Siwar Jendoubi</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="publications.html" class="active">Publications</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="assets/pdfs/cv_siwar_jendoubi.pdf" class="btn-cv" target="_blank">
+                    <i class="fas fa-download"></i> CV
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="publications-header">
+        <div class="container">
+            <h1>Research Publications</h1>
+            <p>20+ peer-reviewed papers in AI, NLP, and Machine Learning with 200+ citations. Focus on evidence theory, social network analysis, and document intelligence.</p>
+            
+            <div class="research-metrics">
+                <div class="research-metric">
+                    <span class="number">20+</span>
+                    <span class="label">Publications</span>
+                </div>
+                <div class="research-metric">
+                    <span class="number">200+</span>
+                    <span class="label">Citations</span>
+                </div>
+                <div class="research-metric">
+                    <span class="number">8</span>
+                    <span class="label">h-index</span>
+                </div>
+                <div class="research-metric">
+                    <span class="number">7</span>
+                    <span class="label">i10-index</span>
+                </div>
+                <div class="research-metric">
+                    <span class="number">66</span>
+                    <span class="label">Top Citation</span>
+                </div>
+            </div>
+            
+            <a href="https://scholar.google.com/citations?user=-oNKimAAAAAJ&hl=fr" 
+               target="_blank" 
+               class="btn-secondary" 
+               style="background: white; color: #2563eb; margin-top: 2rem;">
+                <i class="fas fa-external-link-alt"></i> View Google Scholar Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="publications-container">
+        
+        <!-- Top Publications -->
+        <section class="top-publications">
+            <h2>Top Cited Works</h2>
+            <div class="top-cards">
+                <div class="top-card">
+                    <div class="rank">#1 • 66 Citations</div>
+                    <div class="title">Two evidential data based models for influence maximization in Twitter</div>
+                    <div class="venue">Knowledge-Based Systems, 2017</div>
+                    <div class="citations">66 citations</div>
+                </div>
+                
+                <div class="top-card">
+                    <div class="rank">#2 • 51 Citations</div>
+                    <div class="title">Advancing automatic plant classification system in Saudi Arabia</div>
+                    <div class="venue">Modeling Earth Systems and Environment, 2024</div>
+                    <div class="citations">51 citations</div>
+                </div>
+                
+                <div class="top-card">
+                    <div class="rank">#3 • 23 Citations</div>
+                    <div class="title">Evidential positive opinion influence measures for viral marketing</div>
+                    <div class="venue">Knowledge and Information Systems, 2020</div>
+                    <div class="citations">23 citations</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <h3 style="margin-bottom: 0.5rem; color: #1e293b;">Filter by Research Area</h3>
+            <div class="filter-tags">
+                <span class="filter-tag active" data-filter="all">All Publications</span>
+                <span class="filter-tag" data-filter="social">Social Networks</span>
+                <span class="filter-tag" data-filter="nlp">NLP & AI</span>
+                <span class="filter-tag" data-filter="vision">Computer Vision</span>
+                <span class="filter-tag" data-filter="theory">Evidence Theory</span>
+                <span class="filter-tag" data-filter="phd">PhD Research</span>
+            </div>
+        </section>
+
+        <!-- Publications List -->
+        <section class="publications-list">
+            
+            <!-- 2024 -->
+            <div class="publication-year-group" data-tags="ai vision">
+                <div class="year-header">
+                    <span>2024</span>
+                    <span class="year-stats">1 publication • 51 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Advancing automatic plant classification system in Saudi Arabia: introducing a novel dataset and ensemble deep learning approach
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 51
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        E Amri, Y Gulzar, A Yeafi, <strong>S Jendoubi</strong>, F Dhawi, MS Mir
+                    </div>
+                    <div class="publication-venue">
+                        Modeling Earth Systems and Environment, 2024
+                    </div>
+                    <div class="publication-abstract">
+                        Introduced a novel ensemble deep learning approach for plant classification using multimodal data from Saudi Arabia, advancing automatic species recognition systems.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag vision">Computer Vision</span>
+                        <span class="publication-tag ai">Deep Learning</span>
+                        <span class="publication-tag ai">Ensemble Methods</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2023 -->
+            <div class="publication-year-group" data-tags="nlp ai">
+                <div class="year-header">
+                    <span>2023</span>
+                    <span class="year-stats">3 publications • 8 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Dynamic named entity recognition
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 6
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        T Luiggi, V Guigue, L Soulier, <strong>S Jendoubi</strong>, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        Proceedings of the 38th ACM/SIGAPP Symposium on Applied Computing, 2023
+                    </div>
+                    <div class="publication-abstract">
+                        Advanced NER system adapting to evolving entity types in financial documents, with applications in dynamic document processing.
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> ACM Digital Library
+                        </a>
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag nlp">NLP</span>
+                        <span class="publication-tag ai">Named Entity Recognition</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            SSFuzzyART: A Semi-Supervised Fuzzy ART through seeding initialization and a clustered data generation algorithm to deeply study clustering solutions
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 2
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Baelde, T Tran
+                    </div>
+                    <div class="publication-venue">
+                        Array, 2023
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag ai">Clustering</span>
+                        <span class="publication-tag ai">Semi-Supervised Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="publication-year-group" data-tags="nlp ai">
+                <div class="year-header">
+                    <span>2022</span>
+                    <span class="year-stats">3 publications</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            A Table Extraction Solution for Financial Spreading
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        DT Ta, <strong>S Jendoubi</strong>, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Database and Expert Systems Applications (DEXA), 2022
+                    </div>
+                    <div class="publication-abstract">
+                        Automated extraction system for financial tables with high structural accuracy, applied to financial document processing.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag nlp">Document Intelligence</span>
+                        <span class="publication-tag ai">Table Extraction</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2020 -->
+            <div class="publication-year-group" data-tags="theory social vision">
+                <div class="year-header">
+                    <span>2020</span>
+                    <span class="year-stats">2 publications • 32 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Evidential positive opinion influence measures for viral marketing
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 23
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Martin
+                    </div>
+                    <div class="publication-venue">
+                        Knowledge and Information Systems, 2020
+                    </div>
+                    <div class="publication-abstract">
+                        Developed evidential measures to quantify positive influence in marketing campaigns, improving targeting accuracy in social networks.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag theory">Evidence Theory</span>
+                        <span class="publication-tag social">Social Networks</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Evidential two-step tree species recognition approach from leaves and bark
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 9
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, D Coquin, R Boukezzoula
+                    </div>
+                    <div class="publication-venue">
+                        Expert Systems with Applications, 2020
+                    </div>
+                    <div class="publication-abstract">
+                        Multimodal fusion approach combining leaf and bark features for tree species recognition, improving recognition rates by 20% over existing solutions.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag vision">Computer Vision</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
+                        <span class="publication-tag ai">Multimodal Fusion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2017 -->
+            <div class="publication-year-group" data-tags="theory social">
+                <div class="year-header">
+                    <span>2017</span>
+                    <span class="year-stats">2 publications • 69 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Two evidential data based models for influence maximization in Twitter
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 66
+                            </span>
+                            <span class="citation-badge" style="background: #8b5cf6;">
+                                <i class="fas fa-star icon"></i> Top
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Martin, L Liétard, HB Hadji, BB Yaghlane
+                    </div>
+                    <div class="publication-venue">
+                        Knowledge-Based Systems, 2017
+                    </div>
+                    <div class="publication-abstract">
+                        Introduced evidence theory-based models for identifying key influencers in social networks, significantly improving accuracy over traditional methods for viral marketing applications.
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1016/j.knosys.2017.01.017" class="publication-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> DOI Link
+                        </a>
+                        <a href="#" class="publication-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag theory">Evidence Theory</span>
+                        <span class="publication-tag social">Influence Maximization</span>
+                        <span class="publication-tag social">Social Media Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PhD Research -->
+            <div class="publication-year-group" data-tags="phd social theory">
+                <div class="year-header">
+                    <span>PhD Dissertation</span>
+                    <span class="year-stats">2016 • 6 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Influencers characterization in a social network for viral marketing perspectives
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 6
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>
+                    </div>
+                    <div class="publication-venue">
+                        PhD Dissertation, University of Rennes & University of Tunis, 2016
+                    </div>
+                    <div class="publication-abstract">
+                        Comprehensive research on influencer characterization and influence maximization in social networks using evidence theory. Developed novel models for identifying key influencers and maximizing information spread in viral marketing campaigns.
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/7c413286-41e7-47ca-b6fe-9a115fa1852b" 
+                           class="publication-link" 
+                           target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Full Thesis PDF
+                        </a>
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag phd">PhD Research</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
+                        <span class="publication-tag social">Viral Marketing</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Conferences Section -->
+        <section style="margin-top: 4rem; padding: 2rem; background: #f8fafc; border-radius: 10px;">
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #1e293b;">Conference Participation</h3>
+            <div class="conferences-list">
+                <span class="conference-badge">IPMU</span>
+                <span class="conference-badge">DaWaK</span>
+                <span class="conference-badge">DEXA</span>
+                <span class="conference-badge">Belief Functions</span>
+                <span class="conference-badge">ECSQARU</span>
+                <span class="conference-badge">EGC</span>
+                <span class="conference-badge">ACM/SIGAPP SAC</span>
+            </div>
+        </section>
+
+        <!-- Back to Home -->
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.125rem;">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Dr. Siwar Jendoubi. All rights reserved.</p>
+            <p class="footer-status">
+                <span class="status-indicator"></span> 
+                Active researcher in AI & NLP
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterTags = document.querySelectorAll('.filter-tag');
+            const publicationGroups = document.querySelectorAll('.publication-year-group');
+            
+            filterTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    // Update active tag
+                    filterTags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Show/hide publications
+                    publicationGroups.forEach(group => {
+                        if (filter === 'all') {
+                            group.style.display = 'block';
+                        } else {
+                            const groupTags = group.getAttribute('data-tags');
+                            if (groupTags && groupTags.includes(filter)) {
+                                group.style.display = 'block';
+                            } else {
+                                group.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Initialize citations sorting
+            const citationBadges = document.querySelectorAll('.citation-badge');
+            citationBadges.forEach(badge => {
+                const citations = parseInt(badge.textContent.match(/\d+/)[0]);
+                if (citations >= 20) {
+                    badge.style.background = '#059669'; // Darker green for high citations
+                } else if (citations >= 10) {
+                    badge.style.background = '#10b981'; // Medium green
+                }
+            });
+        });
+    </script>
+</body>
+</html>
