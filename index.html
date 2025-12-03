@@ -78,59 +78,339 @@ def analyze_documents(docs):
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>PhD-level AI Researcher with a decade of experience specializing in <strong>automated document intelligence</strong> and <strong>information extraction</strong>. I design and deploy advanced NLP systems that transform unstructured text into actionable insights.</p>
-                    
-                    <p>My expertise lies in bridging cutting-edge research with practical business applications. I recently developed a novel <strong>LLM-guided clustering algorithm</strong> that increased data processing efficiency by <strong>50%</strong>, demonstrating my ability to deliver measurable impact.</p>
-                    
-                    <div class="expertise-grid">
-                        <div class="expertise-category">
-                            <h3><i class="fas fa-brain"></i> Core AI Skills</h3>
-                            <ul>
-                                <li>Natural Language Processing (NLP)</li>
-                                <li>Retrieval-Augmented Generation (RAG)</li>
-                                <li>Large Language Models (LLMs)</li>
-                                <li>Deep Learning (PyTorch)</li>
-                                <li>Generative AI</li>
-                            </ul>
+    <!-- About Section - VERSION SIMPLIFIÉE ET ALIGNÉE -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        
+        <!-- Introduction -->
+        <div class="about-intro" style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+            <p style="font-size: 1.25rem; line-height: 1.7; color: #475569;">
+                <strong>PhD-level AI Researcher & Data Scientist</strong> with a decade of experience specializing in automated document intelligence and information extraction. Expert in designing advanced NLP systems that transform unstructured text into actionable insights.
+            </p>
+        </div>
+
+        <div class="about-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+            
+            <!-- Left Column - Main Content -->
+            <div class="about-main">
+                
+                <!-- Impact Metrics -->
+                <div class="impact-metrics" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
+                    <h3 style="color: #1e40af; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-chart-line"></i> Measurable Impact
+                    </h3>
+                    <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                        <div class="metric-item" style="text-align: center;">
+                            <div class="metric-value" style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1;">50%</div>
+                            <div class="metric-label" style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Efficiency increase with novel clustering algorithm</div>
                         </div>
-                        <div class="expertise-category">
-                            <h3><i class="fas fa-code"></i> Technical Stack</h3>
-                            <ul>
-                                <li>Python, FastAPI, React</li>
-                                <li>LangChain, Hugging Face</li>
-                                <li>Vector Databases</li>
-                                <li>AWS, Azure Cloud</li>
-                                <li>MLOps & CI/CD</li>
-                            </ul>
+                        <div class="metric-item" style="text-align: center;">
+                            <div class="metric-value" style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1;">20+</div>
+                            <div class="metric-label" style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Peer-reviewed research papers published</div>
+                        </div>
+                        <div class="metric-item" style="text-align: center;">
+                            <div class="metric-value" style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1;">>90%</div>
+                            <div class="metric-label" style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Project success rate across end-to-end deliveries</div>
+                        </div>
+                        <div class="metric-item" style="text-align: center;">
+                            <div class="metric-value" style="font-size: 2.5rem; font-weight: 800; color: #2563eb; line-height: 1;">200+</div>
+                            <div class="metric-label" style="font-size: 0.875rem; color: #475569; margin-top: 0.5rem;">Academic citations for research contributions</div>
                         </div>
                     </div>
                 </div>
-                <div class="about-quick-info">
-                    <div class="info-card">
-                        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
-                        <p>Paris, France</p>
-                        <p><em>Open to remote & hybrid roles</em></p>
+
+                <!-- Skills Container - UNIFORME -->
+                <div class="skills-container">
+                    
+                    <!-- Technical Skills -->
+                    <div class="skills-section" style="margin-bottom: 2.5rem;">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-code" style="color: #3b82f6;"></i> Technical Expertise
+                        </h3>
+                        
+                        <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                            
+                            <!-- AI & ML -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #3b82f6; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">AI & Machine Learning</h4>
+                                </div>
+                                <div class="skill-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                    <span class="tag" style="background: #dbeafe; color: #1e40af; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">NLP</span>
+                                    <span class="tag" style="background: #f0f9ff; color: #0369a1; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">RAG</span>
+                                    <span class="tag" style="background: #f0fdf4; color: #166534; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Gen AI</span>
+                                    <span class="tag" style="background: #fef3c7; color: #92400e; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Deep Learning</span>
+                                    <span class="tag" style="background: #fce7f3; color: #9d174d; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">LLMs</span>
+                                    <span class="tag" style="background: #e0f2fe; color: #0369a1; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Clustering</span>
+                                </div>
+                                <p class="skill-desc" style="color: #64748b; font-size: 0.875rem; margin-top: 1rem; line-height: 1.5;">
+                                    Specialized in Document Intelligence, Information Extraction, and Retrieval-Augmented Generation systems.
+                                </p>
+                            </div>
+                            
+                            <!-- Development -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #7c3aed; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">Development Stack</h4>
+                                </div>
+                                <div class="skill-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                    <span class="tag" style="background: #e0f2fe; color: #0369a1; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Python</span>
+                                    <span class="tag" style="background: #f1f5f9; color: #475569; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">PyTorch</span>
+                                    <span class="tag" style="background: #fef3c7; color: #92400e; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">FastAPI</span>
+                                    <span class="tag" style="background: #f3e8ff; color: #7e22ce; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">React</span>
+                                    <span class="tag" style="background: #dcfce7; color: #15803d; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">Docker</span>
+                                    <span class="tag" style="background: #fef3c7; color: #92400e; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">LangChain</span>
+                                </div>
+                                <p class="skill-desc" style="color: #64748b; font-size: 0.875rem; margin-top: 1rem; line-height: 1.5;">
+                                    Full-stack AI solution development from research to production API deployment.
+                                </p>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-                        <p><strong>PhD Computer Science</strong></p>
-                        <p>University of Tunis & University of Rennes I</p>
+                    
+                    <!-- Professional Strengths - MÊME STRUCTURE -->
+                    <div class="skills-section" style="margin-bottom: 2.5rem;">
+                        <h3 style="color: #1e293b; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e5e7eb; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-user-tie" style="color: #8b5cf6;"></i> Professional Strengths
+                        </h3>
+                        
+                        <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                            
+                            <!-- Leadership -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #3b82f6; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">Leadership & Mentoring</h4>
+                                </div>
+                                <ul style="color: #475569; font-size: 0.875rem; margin: 0; padding-left: 1rem; line-height: 1.6;">
+                                    <li>Mentored PhD students to successful thesis defense</li>
+                                    <li>Supervised DBA candidates' research methodology</li>
+                                    <li>Led intern teams on AI projects using active learning</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Communication -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #8b5cf6; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-comments"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">Communication & Collaboration</h4>
+                                </div>
+                                <ul style="color: #475569; font-size: 0.875rem; margin: 0; padding-left: 1rem; line-height: 1.6;">
+                                    <li>20+ scientific papers & international conference presentations</li>
+                                    <li>Trilingual: Arabic (native), French (fluent), English (advanced)</li>
+                                    <li>Clear stakeholder reporting & solution presentations</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Project Management -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #10b981; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">Project Management</h4>
+                                </div>
+                                <ul style="color: #475569; font-size: 0.875rem; margin: 0; padding-left: 1rem; line-height: 1.6;">
+                                    <li>End-to-end project delivery with >90% success rate</li>
+                                    <li>Agile methodology & stakeholder management</li>
+                                    <li>From planning to deployment with measurable results</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Innovation -->
+                            <div class="skill-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                                <div class="skill-header" style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <div class="skill-icon" style="background: #f59e0b; color: white; width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h4 style="color: #1e293b; margin: 0; font-size: 1.125rem;">Innovation & Problem Solving</h4>
+                                </div>
+                                <ul style="color: #475569; font-size: 0.875rem; margin: 0; padding-left: 1rem; line-height: 1.6;">
+                                    <li>Developed novel LLM-guided clustering algorithm</li>
+                                    <li>Creative solutions delivering 50% efficiency gains</li>
+                                    <li>Evidence-based approach to complex challenges</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="info-card">
-                        <h4><i class="fas fa-bullseye"></i> Current Focus</h4>
-                        <p>Document Intelligence</p>
-                        <p>RAG Applications</p>
-                        <p>LLM-Guided Analytics</p>
+                    
+                </div>
+
+                <!-- Philosophy Section -->
+                <div class="philosophy" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 2rem; border-radius: 12px; margin-top: 2rem;">
+                    <h3 style="color: #92400e; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-bullseye"></i> My Professional Philosophy
+                    </h3>
+                    <p style="color: #78350f; font-size: 1.125rem; line-height: 1.6; margin-bottom: 1.5rem; font-weight: 500;">
+                        "I combine deep technical expertise with strong business acumen to deliver AI solutions that are innovative, practical, scalable, and deliver measurable ROI. My approach bridges cutting-edge research with real-world applications."
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <span style="background: rgba(146, 64, 14, 0.15); color: #78350f; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            Research-to-Production Pipeline
+                        </span>
+                        <span style="background: rgba(146, 64, 14, 0.15); color: #78350f; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            Business Impact Focus
+                        </span>
+                        <span style="background: rgba(146, 64, 14, 0.15); color: #78350f; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            Collaborative Innovation
+                        </span>
+                        <span style="background: rgba(146, 64, 14, 0.15); color: #78350f; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            Measurable Results
+                        </span>
                     </div>
                 </div>
+                
+            </div>
+            
+            <!-- Right Column - Sidebar -->
+            <div class="about-sidebar">
+                
+                <!-- Location & Mobility -->
+                <div class="sidebar-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-map-marker-alt" style="color: #3b82f6;"></i> Location & Mobility
+                    </h4>
+                    <p style="color: #475569; margin-bottom: 0.75rem; font-weight: 500;">
+                        <i class="fas fa-city" style="color: #64748b;"></i> Paris, Île-de-France
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span style="background: #dbeafe; color: #1e40af; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-laptop-house"></i> Remote
+                        </span>
+                        <span style="background: #e0f2fe; color: #0369a1; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-balance-scale"></i> Hybrid
+                        </span>
+                        <span style="background: #f0f9ff; color: #0c4a6e; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.875rem; font-weight: 500;">
+                            <i class="fas fa-building"></i> On-site
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Education -->
+                <div class="sidebar-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-graduation-cap" style="color: #7c3aed;"></i> Education
+                    </h4>
+                    <div>
+                        <p style="color: #1e293b; margin-bottom: 0.25rem; font-weight: 600; font-size: 1rem;">PhD Computer Science</p>
+                        <p style="color: #64748b; font-size: 0.875rem; margin-bottom: 0.75rem;">
+                            University of Tunis & University of Rennes I
+                        </p>
+                        <div style="background: #f8fafc; padding: 0.75rem; border-radius: 8px; border-left: 3px solid #7c3aed;">
+                            <p style="color: #475569; font-size: 0.875rem; margin: 0; font-style: italic;">
+                                "Influencers characterization in social networks for viral marketing perspectives"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Languages -->
+                <div class="sidebar-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 style="color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-language" style="color: #10b981;"></i> Languages
+                    </h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                <span style="color: #475569; font-size: 0.875rem; font-weight: 500;">Arabic</span>
+                                <span style="color: #059669; font-size: 0.75rem; font-weight: 600;">Native</span>
+                            </div>
+                            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
+                                <div style="width: 100%; height: 100%; background: #10b981; border-radius: 3px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                <span style="color: #475569; font-size: 0.875rem; font-weight: 500;">French</span>
+                                <span style="color: #3b82f6; font-size: 0.75rem; font-weight: 600;">Fluent</span>
+                            </div>
+                            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
+                                <div style="width: 100%; height: 100%; background: #3b82f6; border-radius: 3px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem;">
+                                <span style="color: #475569; font-size: 0.875rem; font-weight: 500;">English</span>
+                                <span style="color: #8b5cf6; font-size: 0.75rem; font-weight: 600;">Advanced</span>
+                            </div>
+                            <div style="height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
+                                <div style="width: 95%; height: 100%; background: #8b5cf6; border-radius: 3px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Current Focus -->
+                <div class="sidebar-card" style="background: white; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem;">
+                    <h4 style="color: #1e293b; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-bullseye" style="color: #f59e0b;"></i> Current Focus
+                    </h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="background: #f0f9ff; color: #0369a1; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div>
+                                <p style="color: #1e293b; margin: 0; font-weight: 500; font-size: 0.875rem;">Document Intelligence</p>
+                                <p style="color: #64748b; margin: 0; font-size: 0.75rem;">RAG systems & information extraction</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="background: #f0fdf4; color: #166534; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <p style="color: #1e293b; margin: 0; font-weight: 500; font-size: 0.875rem;">Generative AI</p>
+                                <p style="color: #64748b; margin: 0; font-size: 0.75rem;">LLM applications & fine-tuning</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="background: #fef3c7; color: #92400e; width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <p style="color: #1e293b; margin: 0; font-weight: 500; font-size: 0.875rem;">Advanced NLP</p>
+                                <p style="color: #64748b; margin: 0; font-size: 0.75rem;">Clustering & classification algorithms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="cta-section" style="text-align: center; margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); border-radius: 16px; color: white;">
+            <h3 style="color: white; margin-bottom: 1rem; font-size: 1.75rem;">Ready to Transform Your Data into Intelligence?</h3>
+            <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.125rem;">
+                Let's discuss how my expertise in AI, NLP, and Document Intelligence can drive innovation and efficiency in your organization.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contact" class="btn-primary" style="background: white; color: #2563eb; border: none; padding: 0.875rem 2rem; font-weight: 600; font-size: 1rem;">
+                    <i class="fas fa-envelope"></i> Contact Me
+                </a>
+                <a href="assets/pdfs/cv_siwar_jendoubi.pdf" class="btn-secondary" style="background: transparent; color: white; border: 2px solid white; padding: 0.875rem 2rem; font-weight: 600; font-size: 1rem;" target="_blank">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
         </div>
-    </section>
+        
+    </div>
+</section>
 
     <!-- Projects Section -->
     <section id="projects" class="section bg-light">
@@ -306,7 +586,7 @@ def analyze_documents(docs):
                         <a href="https://www.linkedin.com/in/siwar-jendoubi/" target="_blank" class="social-link">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <a href="https://github.com/Siwar-J" target="_blank" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://scholar.google.com/citations?user=-oNKimAAAAAJ&hl=fr" target="_blank" class="social-link">

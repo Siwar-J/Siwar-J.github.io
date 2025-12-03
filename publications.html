@@ -159,6 +159,7 @@
             display: flex;
             gap: 0.5rem;
             margin-left: 1rem;
+            flex-shrink: 0;
         }
         
         .citation-badge {
@@ -171,6 +172,7 @@
             display: flex;
             align-items: center;
             gap: 0.25rem;
+            white-space: nowrap;
         }
         
         .citation-badge .icon {
@@ -205,6 +207,7 @@
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
+            flex-wrap: wrap;
         }
         
         .publication-link {
@@ -247,6 +250,10 @@
         .publication-tag.vision { background: #dcfce7; color: #15803d; }
         .publication-tag.theory { background: #f3e8ff; color: #7e22ce; }
         .publication-tag.ai { background: #fef3c7; color: #92400e; }
+        .publication-tag.clustering { background: #fef3c7; color: #92400e; }
+        .publication-tag.ner { background: #dbeafe; color: #1e40af; }
+        .publication-tag.speech { background: #fef3c7; color: #92400e; }
+        .publication-tag.hmm { background: #f3e8ff; color: #7e22ce; }
         
         .top-publications {
             background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
@@ -310,6 +317,30 @@
             color: #475569;
         }
         
+        .publication-count {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.125rem;
+            color: #64748b;
+        }
+        
+        .publication-count strong {
+            color: #2563eb;
+        }
+        
+        .phd-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 6px solid #d97706;
+        }
+        
+        .phd-section h2 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+        
         @media (max-width: 768px) {
             .publications-header h1 {
                 font-size: 2rem;
@@ -331,6 +362,10 @@
             
             .top-publications {
                 padding: 2rem 1rem;
+            }
+            
+            .publication-title {
+                font-size: 1rem;
             }
         }
     </style>
@@ -360,11 +395,11 @@
     <section class="publications-header">
         <div class="container">
             <h1>Research Publications</h1>
-            <p>20+ peer-reviewed papers in AI, NLP, and Machine Learning with 200+ citations. Focus on evidence theory, social network analysis, and document intelligence.</p>
+            <p><strong>23 peer-reviewed papers</strong> in AI, NLP, and Machine Learning with <strong>200+ citations</strong>. Research spanning evidence theory, social network analysis, computer vision, and document intelligence.</p>
             
             <div class="research-metrics">
                 <div class="research-metric">
-                    <span class="number">20+</span>
+                    <span class="number">23</span>
                     <span class="label">Publications</span>
                 </div>
                 <div class="research-metric">
@@ -397,6 +432,11 @@
     <!-- Main Content -->
     <main class="publications-container">
         
+        <!-- Publication Count -->
+        <div class="publication-count">
+            Showing <strong>23 publications</strong> from 2013 to 2024
+        </div>
+        
         <!-- Top Publications -->
         <section class="top-publications">
             <h2>Top Cited Works</h2>
@@ -424,16 +464,56 @@
             </div>
         </section>
 
+        <!-- PhD Dissertation Section -->
+        <section class="phd-section">
+            <h2><i class="fas fa-graduation-cap"></i> PhD Dissertation</h2>
+            <div class="publication-card">
+                <div class="publication-header">
+                    <div class="publication-title">
+                        Influencers characterization in a social network for viral marketing perspectives
+                    </div>
+                    <div class="publication-badges">
+                        <span class="citation-badge">
+                            <i class="fas fa-quote-right icon"></i> 6
+                        </span>
+                    </div>
+                </div>
+                <div class="publication-authors">
+                    <strong>S Jendoubi</strong>
+                </div>
+                <div class="publication-venue">
+                    PhD Dissertation, University of Rennes I & University of Tunis, 2016
+                </div>
+                <div class="publication-abstract">
+                    Comprehensive research on influencer characterization and influence maximization in social networks using evidence theory. Developed novel models for identifying key influencers and maximizing information spread in viral marketing campaigns. This work forms the foundation of my research in social network analysis and evidence theory applications.
+                </div>
+                <div class="publication-links">
+                    <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/7c413286-41e7-47ca-b6fe-9a115fa1852b" 
+                       class="publication-link" 
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Full Thesis PDF
+                    </a>
+                </div>
+                <div class="publication-tags">
+                    <span class="publication-tag theory">Evidence Theory</span>
+                    <span class="publication-tag social">Social Networks</span>
+                    <span class="publication-tag social">Viral Marketing</span>
+                    <span class="publication-tag social">Influence Maximization</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Filter Section -->
         <section class="filter-section">
             <h3 style="margin-bottom: 0.5rem; color: #1e293b;">Filter by Research Area</h3>
             <div class="filter-tags">
-                <span class="filter-tag active" data-filter="all">All Publications</span>
-                <span class="filter-tag" data-filter="social">Social Networks</span>
-                <span class="filter-tag" data-filter="nlp">NLP & AI</span>
-                <span class="filter-tag" data-filter="vision">Computer Vision</span>
-                <span class="filter-tag" data-filter="theory">Evidence Theory</span>
-                <span class="filter-tag" data-filter="phd">PhD Research</span>
+                <span class="filter-tag active" data-filter="all">All Publications (23)</span>
+                <span class="filter-tag" data-filter="social">Social Networks (9)</span>
+                <span class="filter-tag" data-filter="theory">Evidence Theory (10)</span>
+                <span class="filter-tag" data-filter="vision">Computer Vision (5)</span>
+                <span class="filter-tag" data-filter="nlp">NLP & AI (6)</span>
+                <span class="filter-tag" data-filter="clustering">Clustering (3)</span>
+                <span class="filter-tag" data-filter="hmm">HMM Models (2)</span>
             </div>
         </section>
 
@@ -441,7 +521,7 @@
         <section class="publications-list">
             
             <!-- 2024 -->
-            <div class="publication-year-group" data-tags="ai vision">
+            <div class="publication-year-group" data-tags="vision ai">
                 <div class="year-header">
                     <span>2024</span>
                     <span class="year-stats">1 publication • 51 citations</span>
@@ -465,7 +545,7 @@
                         Modeling Earth Systems and Environment, 2024
                     </div>
                     <div class="publication-abstract">
-                        Introduced a novel ensemble deep learning approach for plant classification using multimodal data from Saudi Arabia, advancing automatic species recognition systems.
+                        Introduced a novel ensemble deep learning approach for plant classification using multimodal data from Saudi Arabia, advancing automatic species recognition systems with state-of-the-art accuracy.
                     </div>
                     <div class="publication-tags">
                         <span class="publication-tag vision">Computer Vision</span>
@@ -476,7 +556,7 @@
             </div>
 
             <!-- 2023 -->
-            <div class="publication-year-group" data-tags="nlp ai">
+            <div class="publication-year-group" data-tags="nlp ai clustering">
                 <div class="year-header">
                     <span>2023</span>
                     <span class="year-stats">3 publications • 8 citations</span>
@@ -500,16 +580,11 @@
                         Proceedings of the 38th ACM/SIGAPP Symposium on Applied Computing, 2023
                     </div>
                     <div class="publication-abstract">
-                        Advanced NER system adapting to evolving entity types in financial documents, with applications in dynamic document processing.
-                    </div>
-                    <div class="publication-links">
-                        <a href="#" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> ACM Digital Library
-                        </a>
+                        Advanced NER system adapting to evolving entity types in financial documents, with applications in dynamic document processing and real-time information extraction.
                     </div>
                     <div class="publication-tags">
                         <span class="publication-tag nlp">NLP</span>
-                        <span class="publication-tag ai">Named Entity Recognition</span>
+                        <span class="publication-tag ner">Named Entity Recognition</span>
                     </div>
                 </div>
                 
@@ -530,9 +605,30 @@
                     <div class="publication-venue">
                         Array, 2023
                     </div>
+                    <div class="publication-abstract">
+                        Novel semi-supervised clustering algorithm with seeding initialization and controlled data generation for in-depth study of clustering solutions.
+                    </div>
                     <div class="publication-tags">
-                        <span class="publication-tag ai">Clustering</span>
+                        <span class="publication-tag clustering">Clustering</span>
                         <span class="publication-tag ai">Semi-Supervised Learning</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            SSFuzzyART: A Semi-Supervised Fuzzy ART Through Seeding Initialization
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Information Processing and Management of Uncertainty (IPMU), 2022
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag clustering">Clustering</span>
+                        <span class="publication-tag ai">Fuzzy ART</span>
                     </div>
                 </div>
             </div>
@@ -557,11 +653,90 @@
                         International Conference on Database and Expert Systems Applications (DEXA), 2022
                     </div>
                     <div class="publication-abstract">
-                        Automated extraction system for financial tables with high structural accuracy, applied to financial document processing.
+                        Automated extraction system for financial tables with high structural accuracy, applied to financial document processing and data spreading applications.
                     </div>
                     <div class="publication-tags">
                         <span class="publication-tag nlp">Document Intelligence</span>
                         <span class="publication-tag ai">Table Extraction</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            A Table Extraction Solution for Financial Spreading
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        DT Ta, <strong>S Jendoubi</strong>, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        Database and Expert Systems Applications - DEXA 2022 Workshops
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag nlp">Document Processing</span>
+                        <span class="publication-tag ai">Financial AI</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Check for updates: A Table Extraction Solution for Financial Spreading
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        DT Ta, <strong>S Jendoubi</strong>, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        DEXA 2022 Workshops
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag nlp">Information Extraction</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2021 -->
+            <div class="publication-year-group" data-tags="clustering ai">
+                <div class="year-header">
+                    <span>2021</span>
+                    <span class="year-stats">2 publications</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Génération de données binaires groupées à partitionnement contrôlé et évaluation de l'impact
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, AB Mamou
+                    </div>
+                    <div class="publication-venue">
+                        Extraction et Gestion des Connaissances: Actes EGC'2021
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag clustering">Clustering</span>
+                        <span class="publication-tag ai">Data Generation</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Génération de données binaires groupées à partitionnement contrôlé et évaluation de l'impact des méthodes de réduction de dimension sur ce partitionnement
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, AB Mamou, A Baelde
+                    </div>
+                    <div class="publication-venue">
+                        EGC 2021
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag clustering">Clustering</span>
+                        <span class="publication-tag ai">Dimensionality Reduction</span>
                     </div>
                 </div>
             </div>
@@ -591,11 +766,12 @@
                         Knowledge and Information Systems, 2020
                     </div>
                     <div class="publication-abstract">
-                        Developed evidential measures to quantify positive influence in marketing campaigns, improving targeting accuracy in social networks.
+                        Developed evidential measures to quantify positive influence in marketing campaigns, improving targeting accuracy and ROI in social network marketing.
                     </div>
                     <div class="publication-tags">
                         <span class="publication-tag theory">Evidence Theory</span>
                         <span class="publication-tag social">Social Networks</span>
+                        <span class="publication-tag social">Viral Marketing</span>
                     </div>
                 </div>
                 
@@ -617,12 +793,114 @@
                         Expert Systems with Applications, 2020
                     </div>
                     <div class="publication-abstract">
-                        Multimodal fusion approach combining leaf and bark features for tree species recognition, improving recognition rates by 20% over existing solutions.
+                        Multimodal fusion approach combining leaf and bark features for tree species recognition, improving recognition rates by 20% over existing solutions through evidence theory combination.
                     </div>
                     <div class="publication-tags">
                         <span class="publication-tag vision">Computer Vision</span>
                         <span class="publication-tag theory">Evidence Theory</span>
                         <span class="publication-tag ai">Multimodal Fusion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2019 -->
+            <div class="publication-year-group" data-tags="vision">
+                <div class="year-header">
+                    <span>2019</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Fusion multimodale pour la reconnaissance des espèces d'arbres à partir des feuilles et des écorces
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, D Coquin, R Boukezzoula
+                    </div>
+                    <div class="publication-venue">
+                        LFA'19, 28ème Rencontres Francophones sur la Logique Floue et ses Applications
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag vision">Computer Vision</span>
+                        <span class="publication-tag ai">Multimodal Fusion</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2018 -->
+            <div class="publication-year-group" data-tags="vision theory social">
+                <div class="year-header">
+                    <span>2018</span>
+                    <span class="year-stats">3 publications • 6 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            An Evidential k-nearest Neighbors Combination Rule for Tree Species Recognition
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 3
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, D Coquin, R Boukezzoula
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Belief Functions, 2018
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag vision">Computer Vision</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Evidential independence maximization on twitter network
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 2
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, M Chebbah, A Martin
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Belief Functions, 2018
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag social">Social Networks</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            K-NN crédibiliste pour la reconnaissance automatique des espèces d'arbres
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 1
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, D Coquin, R Boukezzoula
+                    </div>
+                    <div class="publication-venue">
+                        LFA 2018 - Rencontres francophones sur la Logique Floue et ses Applications
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag vision">Computer Vision</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
                     </div>
                 </div>
             </div>
@@ -655,7 +933,7 @@
                         Knowledge-Based Systems, 2017
                     </div>
                     <div class="publication-abstract">
-                        Introduced evidence theory-based models for identifying key influencers in social networks, significantly improving accuracy over traditional methods for viral marketing applications.
+                        Introduced evidence theory-based models for identifying key influencers in social networks, significantly improving accuracy over traditional methods for viral marketing applications. The approach combines evidential reasoning with social network analysis.
                     </div>
                     <div class="publication-links">
                         <a href="https://doi.org/10.1016/j.knosys.2017.01.017" class="publication-link" target="_blank">
@@ -671,46 +949,187 @@
                         <span class="publication-tag social">Social Media Analysis</span>
                     </div>
                 </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            A reliability-based approach for influence maximization using the evidence theory
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 3
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Martin
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Big Data Analytics and Knowledge Discovery (DaWaK), 2017
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag theory">Evidence Theory</span>
+                        <span class="publication-tag social">Influence Maximization</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- PhD Research -->
-            <div class="publication-year-group" data-tags="phd social theory">
+            <!-- 2016 -->
+            <div class="publication-year-group" data-tags="theory social">
                 <div class="year-header">
-                    <span>PhD Dissertation</span>
-                    <span class="year-stats">2016 • 6 citations</span>
+                    <span>2016</span>
+                    <span class="year-stats">1 publication • 14 citations</span>
                 </div>
                 
                 <div class="publication-card">
                     <div class="publication-header">
                         <div class="publication-title">
-                            Influencers characterization in a social network for viral marketing perspectives
+                            Maximizing positive opinion influence using an evidential approach
                         </div>
                         <div class="publication-badges">
                             <span class="citation-badge">
-                                <i class="fas fa-quote-right icon"></i> 6
+                                <i class="fas fa-quote-right icon"></i> 14
                             </span>
                         </div>
                     </div>
                     <div class="publication-authors">
-                        <strong>S Jendoubi</strong>
+                        <strong>S Jendoubi</strong>, A Martin, L Liétard, HB Hadji, BB Yaghlane
                     </div>
                     <div class="publication-venue">
-                        PhD Dissertation, University of Rennes & University of Tunis, 2016
-                    </div>
-                    <div class="publication-abstract">
-                        Comprehensive research on influencer characterization and influence maximization in social networks using evidence theory. Developed novel models for identifying key influencers and maximizing information spread in viral marketing campaigns.
-                    </div>
-                    <div class="publication-links">
-                        <a href="https://ged.univ-rennes1.fr/nuxeo/site/esupversions/7c413286-41e7-47ca-b6fe-9a115fa1852b" 
-                           class="publication-link" 
-                           target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Full Thesis PDF
-                        </a>
+                        Uncertainty Modelling in Knowledge Engineering and Decision Making, 2016
                     </div>
                     <div class="publication-tags">
-                        <span class="publication-tag phd">PhD Research</span>
                         <span class="publication-tag theory">Evidence Theory</span>
-                        <span class="publication-tag social">Viral Marketing</span>
+                        <span class="publication-tag social">Opinion Influence</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2015 -->
+            <div class="publication-year-group" data-tags="social theory">
+                <div class="year-header">
+                    <span>2015</span>
+                    <span class="year-stats">1 publication • 14 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Dynamic time warping distance for message propagation classification in twitter
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 14
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Martin, L Liétard, B Ben Yaghlane, H Ben Hadji
+                    </div>
+                    <div class="publication-venue">
+                        European Conference on Symbolic and Quantitative Approaches to Reasoning and Uncertainty (ECSQARU), 2015
+                    </div>
+                    <div class="publication-abstract">
+                        Applied dynamic time warping for classifying message propagation patterns in Twitter, combining temporal analysis with social network dynamics.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag social">Social Networks</span>
+                        <span class="publication-tag theory">Time Series Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2014 -->
+            <div class="publication-year-group" data-tags="social theory hmm">
+                <div class="year-header">
+                    <span>2014</span>
+                    <span class="year-stats">2 publications • 24 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Classification of message spreading in a heterogeneous social network
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 16
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, A Martin, L Liétard, B Ben Yaghlane
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Information Processing and Management of Uncertainty (IPMU), 2014
+                    </div>
+                    <div class="publication-abstract">
+                        Early work on modeling and classifying information propagation patterns in heterogeneous social networks, forming the basis for later influence maximization research.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag social">Social Networks</span>
+                        <span class="publication-tag theory">Information Propagation</span>
+                    </div>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Second-order belief hidden markov models
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 8
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        J Park, M Chebbah, <strong>S Jendoubi</strong>, A Martin
+                    </div>
+                    <div class="publication-venue">
+                        International Conference on Belief Functions, 2014
+                    </div>
+                    <div class="publication-abstract">
+                        Advanced hidden Markov models incorporating second-order belief functions for improved uncertainty modeling in sequential data.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag hmm">HMM Models</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2013 -->
+            <div class="publication-year-group" data-tags="hmm speech">
+                <div class="year-header">
+                    <span>2013</span>
+                    <span class="year-stats">1 publication • 8 citations</span>
+                </div>
+                
+                <div class="publication-card">
+                    <div class="publication-header">
+                        <div class="publication-title">
+                            Belief hidden Markov model for speech recognition
+                        </div>
+                        <div class="publication-badges">
+                            <span class="citation-badge">
+                                <i class="fas fa-quote-right icon"></i> 8
+                            </span>
+                        </div>
+                    </div>
+                    <div class="publication-authors">
+                        <strong>S Jendoubi</strong>, BB Yaghlane, A Martin
+                    </div>
+                    <div class="publication-venue">
+                        5th International Conference on Modeling, Simulation and Applied Optimization (ICMSAO), 2013
+                    </div>
+                    <div class="publication-abstract">
+                        Early application of belief functions to hidden Markov models for speech recognition, demonstrating improved handling of uncertainty in audio signal processing.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="publication-tag hmm">HMM Models</span>
+                        <span class="publication-tag speech">Speech Recognition</span>
+                        <span class="publication-tag theory">Evidence Theory</span>
                     </div>
                 </div>
             </div>
@@ -728,6 +1147,27 @@
                 <span class="conference-badge">ECSQARU</span>
                 <span class="conference-badge">EGC</span>
                 <span class="conference-badge">ACM/SIGAPP SAC</span>
+                <span class="conference-badge">ICMSAO</span>
+                <span class="conference-badge">LFA</span>
+            </div>
+        </section>
+
+        <!-- Research Summary -->
+        <section style="margin: 4rem 0; padding: 2rem; background: #e0f2fe; border-radius: 10px;">
+            <h3 style="text-align: center; margin-bottom: 1.5rem; color: #0369a1;">Research Evolution</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; text-align: center;">
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #1e293b;">2013-2016</h4>
+                    <p>PhD Focus: Evidence Theory & Social Networks</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #1e293b;">2017-2019</h4>
+                    <p>Postdoc: Computer Vision & Multimodal AI</p>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <h4 style="color: #1e293b;">2020-Present</h4>
+                    <p>Industry: NLP, Document Intelligence & GenAI</p>
+                </div>
             </div>
         </section>
 
@@ -757,7 +1197,34 @@
         document.addEventListener('DOMContentLoaded', function() {
             const filterTags = document.querySelectorAll('.filter-tag');
             const publicationGroups = document.querySelectorAll('.publication-year-group');
+            const publicationCards = document.querySelectorAll('.publication-card');
             
+            // Function to update filter counts
+            function updateFilterCounts() {
+                const counts = {
+                    'all': publicationCards.length,
+                    'social': document.querySelectorAll('[data-tags*="social"] .publication-card').length,
+                    'theory': document.querySelectorAll('[data-tags*="theory"] .publication-card').length,
+                    'vision': document.querySelectorAll('[data-tags*="vision"] .publication-card').length,
+                    'nlp': document.querySelectorAll('[data-tags*="nlp"] .publication-card').length,
+                    'clustering': document.querySelectorAll('[data-tags*="clustering"] .publication-card').length,
+                    'hmm': document.querySelectorAll('[data-tags*="hmm"] .publication-card').length
+                };
+                
+                // Update filter tag texts
+                filterTags.forEach(tag => {
+                    const filter = tag.getAttribute('data-filter');
+                    if (filter !== 'all') {
+                        const count = counts[filter] || 0;
+                        tag.textContent = tag.textContent.replace(/\(\d+\)/, `(${count})`);
+                    }
+                });
+            }
+            
+            // Initialize counts
+            updateFilterCounts();
+            
+            // Filter functionality
             filterTags.forEach(tag => {
                 tag.addEventListener('click', function() {
                     // Update active tag
@@ -770,12 +1237,51 @@
                     publicationGroups.forEach(group => {
                         if (filter === 'all') {
                             group.style.display = 'block';
+                            // Show all cards in the group
+                            group.querySelectorAll('.publication-card').forEach(card => {
+                                card.style.display = 'block';
+                            });
                         } else {
                             const groupTags = group.getAttribute('data-tags');
                             if (groupTags && groupTags.includes(filter)) {
                                 group.style.display = 'block';
+                                // Show only cards with matching tags
+                                group.querySelectorAll('.publication-card').forEach(card => {
+                                    card.style.display = 'block';
+                                });
                             } else {
-                                group.style.display = 'none';
+                                // Check individual cards in this group
+                                const hasMatchingCard = Array.from(group.querySelectorAll('.publication-card')).some(card => {
+                                    const cardTags = Array.from(card.querySelectorAll('.publication-tag')).map(tag => {
+                                        return tag.classList.contains(filter) ? filter : 
+                                               tag.classList.contains('social') && filter === 'social' ? 'social' :
+                                               tag.classList.contains('theory') && filter === 'theory' ? 'theory' :
+                                               tag.classList.contains('vision') && filter === 'vision' ? 'vision' :
+                                               tag.classList.contains('nlp') && filter === 'nlp' ? 'nlp' :
+                                               tag.classList.contains('clustering') && filter === 'clustering' ? 'clustering' :
+                                               tag.classList.contains('hmm') && filter === 'hmm' ? 'hmm' : '';
+                                    });
+                                    return cardTags.includes(filter);
+                                });
+                                
+                                if (hasMatchingCard) {
+                                    group.style.display = 'block';
+                                    // Hide cards that don't match
+                                    group.querySelectorAll('.publication-card').forEach(card => {
+                                        const cardTags = Array.from(card.querySelectorAll('.publication-tag')).map(tag => {
+                                            return tag.classList.contains(filter) ? filter : 
+                                                   tag.classList.contains('social') && filter === 'social' ? 'social' :
+                                                   tag.classList.contains('theory') && filter === 'theory' ? 'theory' :
+                                                   tag.classList.contains('vision') && filter === 'vision' ? 'vision' :
+                                                   tag.classList.contains('nlp') && filter === 'nlp' ? 'nlp' :
+                                                   tag.classList.contains('clustering') && filter === 'clustering' ? 'clustering' :
+                                                   tag.classList.contains('hmm') && filter === 'hmm' ? 'hmm' : '';
+                                        });
+                                        card.style.display = cardTags.includes(filter) ? 'block' : 'none';
+                                    });
+                                } else {
+                                    group.style.display = 'none';
+                                }
                             }
                         }
                     });
@@ -785,12 +1291,42 @@
             // Initialize citations sorting
             const citationBadges = document.querySelectorAll('.citation-badge');
             citationBadges.forEach(badge => {
-                const citations = parseInt(badge.textContent.match(/\d+/)[0]);
-                if (citations >= 20) {
-                    badge.style.background = '#059669'; // Darker green for high citations
-                } else if (citations >= 10) {
-                    badge.style.background = '#10b981'; // Medium green
+                const match = badge.textContent.match(/\d+/);
+                if (match) {
+                    const citations = parseInt(match[0]);
+                    if (citations >= 20) {
+                        badge.style.background = '#059669'; // Darker green for high citations
+                    } else if (citations >= 10) {
+                        badge.style.background = '#10b981'; // Medium green
+                    } else if (citations >= 5) {
+                        badge.style.background = '#34d399'; // Light green
+                    }
                 }
+            });
+            
+            // Add animation to publication cards
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Initialize cards with animation
+            publicationCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                setTimeout(() => {
+                    observer.observe(card);
+                }, index * 100);
             });
         });
     </script>
