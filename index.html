@@ -417,108 +417,121 @@ def analyze_documents(docs):
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <p class="section-subtitle">End-to-end AI solutions from research to production</p>
+           
+
+
+        <div class="experiences-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
             
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-tags">
-                        <span class="tag tag-nlp">NLP</span>
-                        <span class="tag tag-rag">RAG</span>
-                        <span class="tag tag-genai">Gen AI</span>
+            <!-- Email Classification Project -->
+            <div class="experience-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem; transition: all 0.3s;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: #3b82f6; color: white; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                    <h3 class="project-title">Financial Contract Intelligence System</h3>
-                    <p class="project-description">Designed and deployed a Retrieval-Augmented Generation application to automate extraction and summarization of key clauses from complex financial contracts.</p>
-                    
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>React</span>
-                        <span>Vector DB</span>
-                        <span>LangChain</span>
+                    <div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.25rem;">Intelligent Email Classification</h3>
+                        <p style="color: #64748b; margin: 0.25rem 0 0 0; font-size: 0.875rem;">DBS Banking • 2022-2023</p>
                     </div>
-                    
-                    <div class="project-results">
-                        <div class="result">
-                            <span class="result-number">50%</span>
-                            <span class="result-label">Faster Review</span>
-                        </div>
-                        <div class="result">
-                            <span class="result-number">90%+</span>
-                            <span class="result-label">Accuracy</span>
-                        </div>
-                    </div>
-                    
-                    <a href="projects/rag-financial.html" class="project-link">View Case Study →</a>
                 </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-tags">
-                        <span class="tag tag-ml">ML</span>
-                        <span class="tag tag-llm">LLM</span>
-                        <span class="tag tag-innovation">Innovation</span>
+                
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: #10b981;">90%+</span>
+                        <span style="color: #475569; font-size: 0.875rem;">F1 Score achieved</span>
                     </div>
-                    <h3 class="project-title">LLM-Guided Clustering Algorithm</h3>
-                    <p class="project-description">Developed a novel clustering algorithm that uses LLM insights to improve transaction data analysis, increasing reconciliation efficiency by 50% for trading systems.</p>
-                    
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>LLM API</span>
-                        <span>Clustering</span>
-                    </div>
-                    
-                    <div class="project-results">
-                        <div class="result">
-                            <span class="result-number">50%</span>
-                            <span class="result-label">Efficiency Gain</span>
-                        </div>
-                        <div class="result">
-                            <span class="result-number">Novel</span>
-                            <span class="result-label">Algorithm</span>
-                        </div>
-                    </div>
-                    
-                    <a href="projects/llm-clustering.html" class="project-link">View Details →</a>
+                    <p style="color: #475569; font-size: 0.875rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Multi-label classification system for customer service emails, improving accuracy from 70% to over 90% through enhanced data preprocessing.
+                    </p>
                 </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-tags">
-                        <span class="tag tag-nlp">NLP</span>
-                        <span class="tag tag-dl">Deep Learning</span>
-                        <span class="tag tag-production">Production</span>
-                    </div>
-                    <h3 class="project-title">NLP Email Classification System</h3>
-                    <p class="project-description">End-to-end NLP solution for customer email classification using deep learning models, achieving >90% success rate and high customer satisfaction.</p>
-                    
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>NLP</span>
-                        <span>Transfer Learning</span>
-                    </div>
-                    
-                    <div class="project-results">
-                        <div class="result">
-                            <span class="result-number">>90%</span>
-                            <span class="result-label">Success Rate</span>
-                        </div>
-                        <div class="result">
-                            <span class="result-number">E2E</span>
-                            <span class="result-label">Deployment</span>
-                        </div>
-                    </div>
-                    
-                    <a href="projects/nlp-email.html" class="project-link">View Project →</a>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                    <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">NLP</span>
+                    <span style="background: #f0fdf4; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">Deep Learning</span>
+                    <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">Multi-label</span>
                 </div>
+                
+                <a href="experience.html#email-classification" class="experience-link" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2563eb; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                    View detailed case study <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                </a>
             </div>
             
-            <div class="text-center">
-                <a href="#contact" class="btn-primary">Discuss a Project Idea</a>
+            <!-- Financial Table Extraction -->
+            <div class="experience-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem; transition: all 0.3s;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: #8b5cf6; color: white; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.25rem;">Financial Table Extraction</h3>
+                        <p style="color: #64748b; margin: 0.25rem 0 0 0; font-size: 0.875rem;">Financial Spreading • 2021-2022</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: #10b981;">96%</span>
+                        <span style="color: #475569; font-size: 0.875rem;">Detection accuracy</span>
+                    </div>
+                    <p style="color: #475569; font-size: 0.875rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Automated extraction of financial tables from PDF reports using hybrid CV/NLP pipeline, achieving 95%+ accuracy on critical financial data.
+                    </p>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                    <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">Computer Vision</span>
+                    <span style="background: #f0f9ff; color: #03a18c; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">OCR</span>
+
+                    <span style="background: #f3e8ff; color: #7e22ce; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">YOLOv3</span>
+                    <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">PDF Processing</span>
+                </div>
+                
+                <a href="experience.html#financial-extraction" class="experience-link" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2563eb; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                    View detailed case study <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                </a>
             </div>
+            
+            <!-- Murex Reconciliation -->
+            <div class="experience-card" style="background: white; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1.5rem; transition: all 0.3s;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: #10b981; color: white; width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div>
+                        <h3 style="color: #1e293b; margin: 0; font-size: 1.25rem;">Murex Reconciliation Clustering</h3>
+                        <p style="color: #64748b; margin: 0.25rem 0 0 0; font-size: 0.875rem;">Trading Systems • 2020-2021</p>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                        <span style="font-size: 1.5rem; font-weight: 700; color: #10b981;">96%</span>
+                        <span style="color: #475569; font-size: 0.875rem;">Data reduction</span>
+                    </div>
+                    <p style="color: #475569; font-size: 0.875rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Clustering solution for trading system reconciliation, reducing dataset by 96% while maintaining 97% of critical root cause information.
+                    </p>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                    <span style="background: #f0f9ff; color: #0369a1; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">Clustering</span>
+                    <span style="background: #f0fdf4; color: #166534; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">FuzzyART</span>
+                    <span style="background: #fef3c7; color: #92400e; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem;">Big Data</span>
+                </div>
+                
+                <a href="experience.html#murex-clustering" class="experience-link" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #2563eb; text-decoration: none; font-weight: 500; font-size: 0.875rem;">
+                    View detailed case study <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i>
+                </a>
+            </div>
+            
         </div>
-    </section>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="experience.html" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.125rem;">
+                <i class="fas fa-briefcase"></i> View All Experiences
+            </a>
+        </div>
+    </div>
+</section>
 
     <!-- Publications Preview -->
     <section class="section">
@@ -598,23 +611,33 @@ def analyze_documents(docs):
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
-                </div>
+                <!-- Contact Form - Simple Version -->
+<div class="contact-form">
+    <form id="contactForm" onsubmit="return sendMailTo(event)">
+        <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 1rem; color: #64748b; font-size: 0.875rem;">
+        Or contact me directly at: 
+        <a href="mailto:jendoubi.siwar@yahoo.fr" style="color: #2563eb; font-weight: 500;">
+            jendoubi.siwar@yahoo.fr
+        </a>
+    </p>
+</div>
             </div>
         </div>
     </section>
@@ -623,7 +646,7 @@ def analyze_documents(docs):
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2024 Dr. Siwar Jendoubi. All rights reserved.</p>
+            <p>© 2025 Dr. Siwar Jendoubi. All rights reserved.</p>
             <p class="footer-status">
                 <span class="status-indicator"></span> 
                 Currently available for new opportunities

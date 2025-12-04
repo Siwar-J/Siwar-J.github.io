@@ -70,3 +70,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+    // Simple mailto function
+    function sendMailTo(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+        
+        // Construct the mailto link
+        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage: ${message}`;
+        const mailtoLink = `mailto:jendoubi.siwar@yahoo.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Open the email client
+        window.location.href = mailtoLink;
+        
+        // Optional: Show success message
+        alert('Your email client will open with the message pre-filled. Please click send to complete.');
+        
+        return false;
+    }
