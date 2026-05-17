@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://siwar-j.github.io/sitemap.xml
